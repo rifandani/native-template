@@ -11,16 +11,16 @@ export type RootStackParamList = {
 };
 
 export type BottomTabParamList = {
-  TabOne: undefined;
-  TabTwo: undefined;
+  Redux: undefined;
+  RQuery: undefined;
 };
 
-export type TabOneParamList = {
-  TabOneScreen: undefined;
+export type ReduxParamList = {
+  ReduxScreen: undefined;
 };
 
-export type TabTwoParamList = {
-  TabTwoScreen: undefined;
+export type RQueryParamList = {
+  RQueryScreen: undefined;
 };
 
 export type NavigationProps = {
