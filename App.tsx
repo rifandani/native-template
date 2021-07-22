@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {StatusBar} from 'react-native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
+import {QueryClient, QueryClientProvider} from 'react-query';
 import 'react-native-gesture-handler';
 //files
 import Navigation from './src/navigation';
@@ -13,17 +14,24 @@ const App: React.FC = () => {
   // theme
   const colorScheme = useColorScheme();
 
+  // react-query
+  const [queryClient] = useState(() => new QueryClient());
+
   return (
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <SafeAreaProvider>
-          <Navigation colorScheme={colorScheme} />
-          <StatusBar
-            barStyle={colorScheme === 'dark' ? 'light-content' : 'dark-content'}
-          />
-        </SafeAreaProvider>
-      </PersistGate>
-    </Provider>
+    <QueryClientProvider client={queryClient}>
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <SafeAreaProvider>
+            <Navigation colorScheme={colorScheme} />
+            <StatusBar
+              barStyle={
+                colorScheme === 'dark' ? 'light-content' : 'dark-content'
+              }
+            />
+          </SafeAreaProvider>
+        </PersistGate>
+      </Provider>
+    </QueryClientProvider>
   );
 };
 
