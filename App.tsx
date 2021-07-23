@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {StatusBar} from 'react-native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {Provider} from 'react-redux';
@@ -15,7 +15,7 @@ const App: React.FC = () => {
   const colorScheme = useColorScheme();
 
   // react-query
-  const [queryClient] = useState(() => new QueryClient());
+  const [queryClient] = React.useState(() => new QueryClient());
 
   return (
     <QueryClientProvider client={queryClient}>

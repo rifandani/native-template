@@ -7,7 +7,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 // files
 import ReduxTabNavigator from './ReduxTabNavigator';
 import RQueryTabNavigator from './RQueryTabNavigator';
-import TabBarIcon from '../components/TabBarIcon';
+import TabBarIcon from '../components/common/TabBarIcon';
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import {BottomTabParamList} from '../types/navigation';

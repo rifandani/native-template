@@ -1,10 +1,10 @@
 import React from 'react';
 import {FlatList, StyleSheet, Text, View} from 'react-native';
 // files
-import OtomaText from '../components/OtomaText';
+import OtomaText from '../components/common/OtomaText';
 import Colors from '../constants/Colors';
 import useGetUsers from '../hooks/useGetUsers';
-import {ThemedView} from '../components/Themed';
+import {ThemedView} from '../components/common/Themed';
 
 export default function RQueryScreen() {
   const {isLoading, data, error} = useGetUsers();

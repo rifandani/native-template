@@ -1,9 +1,9 @@
 import React from 'react';
 import {StyleSheet, View, Text, Button} from 'react-native';
 // files
-import OtomaText from '../components/OtomaText';
+import OtomaText from '../components/common/OtomaText';
 import Colors from '../constants/Colors';
-import {ThemedView} from '../components/Themed';
+import {ThemedView} from '../components/common/Themed';
 import {useAppDispatch, useAppSelector} from '../lib/redux/store';
 import {
   counterSelector,
