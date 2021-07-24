@@ -24,5 +24,5 @@ export type RQueryParamList = {
 };
 
 export type NavigationProps = {
-  colorScheme: ColorSchemeName;
+  colorScheme?: ColorSchemeName;
 };

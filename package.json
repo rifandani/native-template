@@ -12,6 +12,7 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
+    "test:watch": "jest --watchAll",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "lint-and-fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
     "format": "prettier --write .",
@@ -23,6 +24,10 @@
     "release:minor": "standard-version --release-as minor",
     "release:major": "standard-version --release-as major"
   },
+  "resolutions": {
+    "@types/react": "^17",
+    "react-native/@jest/create-cache-key-function": "^27.0.2"
+  },
   "lint-staged": {
     "*.@(ts|tsx)": [
       "yarn lint",
@@ -33,9 +38,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "resolutions": {
-    "@types/react": "^17"
   },
   "jest": {
     "preset": "react-native",
@@ -52,8 +54,14 @@
     ],
     "automock": false,
     "setupFiles": [
-      "./jest.setup.js"
-    ]
+      "./jestSetup.js",
+      "./node_modules/react-native-gesture-handler/jestSetup.js",
+      "./node_modules/react-native/jest/setup.js"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?@?react-native|@react-native-community|@react-navigation)"
+    ],
+    "testEnvironment": "node"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.15.5",
@@ -90,6 +98,7 @@
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.30.0",
+    "eslint-plugin-jest": "^24.4.0",
     "husky": "^6.0.0",
     "jest": "^27.0.6",
     "jest-fetch-mock": "^3.0.3",

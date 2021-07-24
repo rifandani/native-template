@@ -18,16 +18,18 @@
 
 ## Libraries 👜
 
-|                                   Service                                    |        Description        |
-| :--------------------------------------------------------------------------: | :-----------------------: |
-|                  [typescript](https://typescriptlang.org/)                   |     Typed Javascript      |
-|                        [eslint](https://eslint.org/)                         |     Javascript Linter     |
-|                       [prettier](https://prettier.io/)                       |      Code Formatter       |
-|                  [husky](https://typicode.github.io/husky/)                  |         Git Hooks         |
-|                [redux-toolkit](https://redux-toolkit.js.org/)                |  Client state management  |
-|           [redux-persist](https://github.com/rt2zz/redux-persist)            |  Persisting redux state   |
-| [async-storage](https://react-native-async-storage.github.io/async-storage/) | React native data storage |
-|               [react-query](https://react-query.tanstack.com)                |  Server state manageent   |
+|                                          Service                                          |         Description          |
+| :---------------------------------------------------------------------------------------: | :--------------------------: |
+|                         [typescript](https://typescriptlang.org/)                         |       Typed Javascript       |
+|                               [eslint](https://eslint.org/)                               |      Javascript Linter       |
+|                             [prettier](https://prettier.io/)                              |        Code Formatter        |
+|                        [husky](https://typicode.github.io/husky/)                         |          Git Hooks           |
+|                      [redux-toolkit](https://redux-toolkit.js.org/)                       |   Client state management    |
+|                 [redux-persist](https://github.com/rt2zz/redux-persist/)                  |    Persisting redux state    |
+|       [async-storage](https://react-native-async-storage.github.io/async-storage/)        |  React native data storage   |
+|                     [react-query](https://react-query.tanstack.com/)                      |    Server state manageent    |
+|                                 [jest](https://jestjs.io)                                 |         Test runners         |
+| [react-native-testing-library](https://callstack.github.io/react-native-testing-library/) | React native testing library |
 
 ## Usage 🏀
 

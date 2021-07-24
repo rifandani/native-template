@@ -19,22 +19,22 @@ import {NavigationProps, RootStackParamList} from '../types/navigation';
 
 // A root stack navigator is often used for displaying modals on top of all other content
 // Read more here: https://reactnavigation.org/docs/modal
-const Stack = createStackNavigator<RootStackParamList>();
+const {Navigator, Screen} = createStackNavigator<RootStackParamList>();
 
-export default function Navigation({colorScheme}: NavigationProps) {
+export default function Navigation({colorScheme = 'light'}: NavigationProps) {
   return (
     <NavigationContainer
       fallback={<ActivityIndicator size="large" color="#00ff00" />}
       linking={LinkingConfiguration}
       theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="Root" component={BottomTabNavigator} />
-        <Stack.Screen
+      <Navigator screenOptions={{headerShown: false}}>
+        <Screen name="Root" component={BottomTabNavigator} />
+        <Screen
           name="NotFound"
-          options={{title: 'Oops!'}}
           component={NotFoundScreen}
+          options={{title: 'Not Found'}}
         />
-      </Stack.Navigator>
+      </Navigator>
     </NavigationContainer>
   );
 }

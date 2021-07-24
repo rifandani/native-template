@@ -1,28 +1,12 @@
 import React from 'react';
-import {StyleSheet, View, Text, Button} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 // files
 import OtomaText from '../components/common/OtomaText';
+import Counter from '../components/redux/Counter';
 import Colors from '../constants/Colors';
 import {ThemedView} from '../components/common/Themed';
-import {useAppDispatch, useAppSelector} from '../lib/redux/store';
-import {
-  counterSelector,
-  decrement,
-  increment,
-} from '../lib/redux/slices/counter';
 
 export default function ReduxScreen() {
-  const {count} = useAppSelector(counterSelector);
-  const dispatch = useAppDispatch();
-
-  const onIncrement = () => {
-    dispatch(increment());
-  };
-
-  const onDecrement = () => {
-    dispatch(decrement());
-  };
-
   return (
     <ThemedView style={styles.container}>
       <OtomaText
@@ -34,10 +18,7 @@ export default function ReduxScreen() {
 
       <View style={styles.separator} />
 
-      <Text>{count}</Text>
-
-      <Button title="increment" onPress={onIncrement} />
-      <Button title="decrement" onPress={onDecrement} />
+      <Counter />
     </ThemedView>
   );
 }

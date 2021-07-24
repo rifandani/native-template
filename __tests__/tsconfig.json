@@ -1,0 +1,11 @@
+{
+  "extends": "../tsconfig.json",
+  "include": ["**/*.ts"],
+  "exclude": [],
+  "compilerOptions": {
+    "types": ["jest", "node"],
+    "lib": ["es2015", "dom", "esnext"],
+    "target": "es5",
+    "isolatedModules": false
+  }
+}
