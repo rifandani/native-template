@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/rifandani/native-template/compare/v0.0.1...v0.0.2) (2021-07-24)
+
+
+### Features
+
+* **jest:** add [@testing-library](https://github.com/testing-library), jest-fetch-mock ([978e591](https://github.com/rifandani/native-template/commit/978e591adb900651dbf1014a3590b812cc657045))
+
 ### 0.0.1 (2021-07-22)
 
 ### Features
